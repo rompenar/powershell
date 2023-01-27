@@ -85,6 +85,9 @@
 
 <h2 id="synopsis">SYNOPSIS</h2>
 <p>Deletes an item from a list</p>
+<a href="https://pnp.github.io/powershell/articles/batching.html">
+<img src="https://raw.githubusercontent.com/pnp/powershell/gh-pages/images/batching/Batching.png" alt="Supports Batching">
+</a>
 <h2 id="syntax">SYNTAX</h2>
 <h3 id="single">Single</h3>
 <pre><code class="lang-powershell">Remove-PnPListItem [-List] &lt;ListPipeBind&gt; -Identity &lt;ListItemPipeBind&gt; [-Recycle] [-Force] 
@@ -93,6 +96,7 @@
 <pre><code class="lang-powershell">Remove-PnPListItem [-List] &lt;ListPipeBind&gt; -Identity &lt;ListItemPipeBind&gt; -Batch &lt;PnPBatch&gt; [-Recycle]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Allows to remove a list item.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Remove-PnPListItem -List &quot;Demo List&quot; -Identity &quot;1&quot; -Force
@@ -111,7 +115,7 @@ Invoke-PnPBatch -Batch $batch
 <h3 id="example-4">EXAMPLE 4</h3>
 <pre><code class="lang-powershell">Remove-PnPListItem -List &quot;Demo List&quot;
 </code></pre>
-<p>Removes all items from the &quot;Demlo List&quot; list after asking for confirmation</p>
+<p>Removes all items from the &quot;Demo List&quot; list after asking for confirmation</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-connection">-Connection</h3>
 <p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
